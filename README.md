@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js E-Commerce Shopify App
+
+Simple application to display products from a Shopify store, and manage a cart.
+
+## Pages
+
+### `pages/index.js`
+
+Homepage
+
+### `pages/products.js`
+
+This page displays a list of products fetched from the Shopify store.
+
+### `pages/products/[id].js`
+
+This page displays the details of a specific product based on its `id` parameter in the URL. It also allows users to add the product to the shopping cart.
+
+### `pages/cart.js`
+
+This page shows the contents of the shopping cart. Users can view the items in the cart, remove items, and checkout.
+
+## API Routes
+
+### `pages/api/products.js`
+
+This API route fetches a list of products from the Shopify store using the Shopify API.
+
+### `pages/api/products/[id].js`
+
+This dynamic API route fetches the details of a specific product based on its `id` param.
+
+## Libraries and Services
+
+- **React Query**: Used for data fetching and caching.
+- **Redux Toolkit**: Manages the shopping cart state.
+- **React Toastify**: Provides toast notifications for user feedback.
+- **Shopify API**: Integrated to fetch product data from a store.
 
 ## Getting Started
 
-First, run the development server:
+1. Clone this repository.
+2. Create a Shopify store and obtain the required API credentials.
+3. Create a `.env.local` file in the project root and add your Shopify API credentials:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```
+   SHOPIFY_API_BASE_URL=https://[insert-store-url].myshopify.com/admin/api/2023-07
+   SHOPIFY_ACCESS_TOKEN=your-access-token
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Install dependencies:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+   ```
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+5. Start the development server:
 
-## Learn More
+   ```
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+6. Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Browse a list of products.
+- View product details.
+- Add products to the shopping cart.
+- Remove products from the shopping cart.
+- View the shopping cart contents.
+- Receive toast notifications for cart actions
