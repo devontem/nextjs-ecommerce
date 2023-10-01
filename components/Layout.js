@@ -2,7 +2,7 @@ import Navbar from "./NavBar";
 
 function Layout({ children }) {
   return (
-    <div>
+    <div style={{ marginBottom: "5rem" }}>
       <Navbar />
       <main>{children}</main>
     </div>

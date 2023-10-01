@@ -39,7 +39,7 @@ function ProductListing() {
                   <Image
                     src={product.image ? product.image.src : ""}
                     alt={product.title}
-                    width={300}
+                    width={400}
                     height={400}
                     style={{
                       objectFit: "cover",
