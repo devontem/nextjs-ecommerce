@@ -14,13 +14,13 @@ function Navbar() {
       const parsedCart = JSON.parse(localStorageCart);
       dispatch(initializeCartFromLocalStorage(parsedCart));
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
       <div className="container">
         <Link href="/" style={{ textDecoration: "none" }}>
-          <h1 className="navbar-brand">D's Vintage T's</h1>
+          <h1 className="navbar-brand">{`D's Vintage T's`}</h1>
         </Link>
 
         <div className="mx-auto">

@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/cartSlice";
 import { ToastContainer, toast } from "react-toastify";
+import Image from "next/image";
 import "react-toastify/dist/ReactToastify.css";
 
 function ProductDetail() {
@@ -46,11 +47,20 @@ function ProductDetail() {
     <div className="container mt-4">
       <div className="row justify-content-center">
         <div className="col-md-4">
-          <img
-            src={product.image ? product.image.src : ""}
-            alt={product.title}
-            className="img-fluid"
-          />
+          <div className="card">
+            <Image
+              src={product.image ? product.image.src : ""}
+              alt={product.title}
+              width={300}
+              height={400}
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+                maxHeight: "400px",
+              }}
+            />
+          </div>
         </div>
         <div className="col-md-4">
           <h2>{product.title}</h2>

@@ -1,6 +1,7 @@
 import { useQuery } from "react-query";
 import { fetchAllProducts } from "../../lib/shopify-service";
 import Link from "next/link";
+import Image from "next/image";
 
 function ProductListing() {
   const {
@@ -34,12 +35,21 @@ function ProductListing() {
               style={{ textDecoration: "none" }}
             >
               <div className="card">
-                <img
-                  src={product.image ? product.image.src : ""}
-                  alt={product.title}
-                  className="card-img-top"
-                  style={{ maxHeight: "250px", objectFit: "cover" }}
-                />
+                <div style={{ maxHeight: "520px" }}>
+                  <Image
+                    src={product.image ? product.image.src : ""}
+                    alt={product.title}
+                    width={300}
+                    height={400}
+                    style={{
+                      objectFit: "cover",
+                      width: "100%",
+                      height: "100%",
+                      maxHeight: "400px",
+                    }}
+                  />
+                </div>
+
                 <div className="card-body">
                   <h5 className="card-title">{product.title}</h5>
                   <p className="card-text">${product.price}</p>
