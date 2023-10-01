@@ -19,14 +19,11 @@ function Cart() {
   };
 
   const handleCheckout = () => {
-    toast.error(
-      "An error occurred. Contact a developer to the finish implementation.",
-      {
-        position: "bottom-right",
-        autoClose: 3000,
-        hideProgressBar: true,
-      }
-    );
+    toast.error("An error occurred. The app hasn't been fully built yet. 😅", {
+      position: "bottom-right",
+      autoClose: 3000,
+      hideProgressBar: true,
+    });
   };
 
   const total = cartItems.reduce((acc, item) => acc + Number(item.price), 0);

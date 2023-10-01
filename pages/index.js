@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// Static Site Generation (SSG) Page
 function HomePage() {
   return (
     <section className="hero d-flex align-items-center justify-content-center">

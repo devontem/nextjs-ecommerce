@@ -63,7 +63,7 @@ function ProductDetail() {
           </div>
         </div>
         <div className="col-md-4">
-          <h2>{product.title}</h2>
+          <h2 class="mt-3">{product.title}</h2>
           <p className="lead">${product.price}</p>
           <button className="btn btn-primary" onClick={handleAddToCart}>
             Add to Cart
