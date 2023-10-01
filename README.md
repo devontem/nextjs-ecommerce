@@ -62,6 +62,12 @@ This dynamic API route fetches the details of a specific product based on its `i
 
 6. Open your browser and visit [http://localhost:3000](http://localhost:3000) to view the app.
 
+7. View tests by running:
+
+   ```
+   npm run test
+   ```
+
 ## Features
 
 - Browse a list of products.
