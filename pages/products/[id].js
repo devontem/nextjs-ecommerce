@@ -33,9 +33,7 @@ function ProductDetail() {
       <div className="container">
         <div className="row justify-content-center">
           {isLoading && (
-            <div className="spinner-grow text-primary" role="status">
-              <span className="sr-only">Loading...</span>
-            </div>
+            <div className="spinner-grow text-primary" role="status"></div>
           )}
           {isError && <p>Error fetching products.</p>}
         </div>

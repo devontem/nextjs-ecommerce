@@ -15,9 +15,10 @@ function ProductListing() {
       <div className="container">
         <div className="row">
           {isLoading && (
-            <div className="spinner-grow text-primary mx-auto" role="status">
-              <span className="sr-only">Loading...</span>
-            </div>
+            <div
+              className="spinner-grow text-primary mx-auto"
+              role="status"
+            ></div>
           )}
           {isError && <p>Error fetching products.</p>}
         </div>
